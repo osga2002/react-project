@@ -1,9 +1,10 @@
 
 
-function ItemListContainer() {
+function ItemListContainer({greeting}) {
     return (
         <div>
-            <h1>Es el proyecto de Jesús Salvación y Vida Etterna!!</h1>
+            <h1>Es el proyecto de Jesús Salvación y Vida Eterna!!</h1>
+            <h2>{greeting}</h2>
         </div>
     )
 }
