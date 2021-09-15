@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
 import Container from "react-bootstrap/Container"
 import NavDropdown from "react-bootstrap/NavDropdown"
-import { BsHouseDoorFill } from "react-icons/bs";
+import { BsHouseDoorFill, BsFillArchiveFill } from "react-icons/bs";
 
 
 const NavBar = () => {
@@ -27,8 +27,10 @@ const NavBar = () => {
                             </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
+                </Container>
+                    <BsFillArchiveFill />
                     <CartWidget />
-                </Container>                
+
             </Navbar>
             </>
     )
