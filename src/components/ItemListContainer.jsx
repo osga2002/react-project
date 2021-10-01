@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
-import { getFetch } from '../utils/Mock'
+import { getFetchUno } from '../utils/Mock'
 
 import ItemCount from "./ItemCount"
 import ItemList from './ItemList'
 
 
 function ItemListContainer({greeting}) {
-    const [personas, setPersonas] = useState([])
+    const [persona, setPersona] = useState([])
     const [loading, setLoading] = useState(true)
 
     const onAdd = (cant)=>{
@@ -14,9 +14,9 @@ function ItemListContainer({greeting}) {
     }
 
     useEffect(() => {
-        getFetch
+        getFetchUno
         .then(respuesta =>{
-            setPersonas(respuesta)
+            setPersona(respuesta)
         })
         .catch(error => console.log(error))
         .finally(()=> setLoading(false))
@@ -25,7 +25,7 @@ function ItemListContainer({greeting}) {
         <div>
             <h1>Es el proyecto de Jesús Salvación y Vida Eterna!!</h1>
             <h2>{greeting}</h2>
-            { loading ? <h2>Cargando...</h2> : <ItemList personas={personas} />
+            { loading ? <h2>Cargando...</h2> : <ItemList persona={persona} />
 
             }
             <ItemCount stock={7} initial={1} onAdd={onAdd} />

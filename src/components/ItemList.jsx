@@ -1,10 +1,9 @@
 import Item from './Item'
 
-const ItemList = ({personas}) => {
+const ItemList = ({persona}) => {
     return (
         <>
-            {personas.map(persona => <Item persona={persona} /> )
-            }
+             <Item persona={persona} />             
         </>
     )
 }
