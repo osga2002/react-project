@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
 import ComponenteConteiner from './components/ComponenteConteiner';
 import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 export default function App(){
  const [pokes, setPokes] = useState([])
@@ -19,10 +20,8 @@ export default function App(){
     <div className="App">
       <NavBar />
       <ItemListContainer greeting="hola" />
+      <ItemDetailContainer />
       <ComponenteConteiner />
-      {pokes.map((poke) => (
-        <h2>{poke.name}</h2>
-      ))}
     </div>
   )
 }
