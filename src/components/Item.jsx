@@ -8,8 +8,8 @@ const Item = ({persona}) => {
                     <div className="card-header">{persona.name}</div>
                     <div className="card-body">
                         <img src={persona.foto} /><br />
-                        <p class="card-text">{persona.descripcion}</p>
-                        <label htmlFor="">Precio</label> <input className="form-control text-right" value={persona.precio} /> 
+                        <p className="card-text">{persona.descripcion}</p>
+                        <label htmlFor="">Precio</label> 
                     </div>
                     <div className="card-footer">
                         <button className="btn btn-outline-primary btn-blok">Detalles</button>
