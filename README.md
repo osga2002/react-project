@@ -3,6 +3,11 @@
 Estoy trabajando en un ecommerce para la venta de respuestos para moto, la idea es que puedan generar la compra desde la pagina web de la empresa.
 
 Uso React-js, react-boostrap, react-router-dom,
+
+Este es el gif 
+
+![Image text](https://github.com/osga2002/react-projectOswaldoGaitan/blob/main/reactProyectoOswaldoGaitan.gif)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
