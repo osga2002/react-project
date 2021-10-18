@@ -1,5 +1,4 @@
-import Button from "react-bootstrap/Button"
-import FormControl from "react-bootstrap/FormControl"
+
 import {useState} from "react";
 
 const ButonSumar = () => {
@@ -39,23 +38,19 @@ const ItemCount = ({ stock, initial, onAdd}) => {
     return (
         <>
             <div className="row">
-                <div className="col-sm-1 text-center">
-                <Button variant="primary" onClick={handleCount}>+</Button>{' '}
+                <div className="col-sm-2 text-center">
+                <button className="mx-auto btn-block btn btn-outline-primary" onClick={handleCount}>+</button>{' '}
                 </div>
-                <div className="col-sm-3">
-                <FormControl
-                    placeholder="Contador"
-                    type="number"
-                    value={count}
-                    />
+                <div className="col-sm-8">
+                <input type="number" placeholder="Contador" className="form-control" value={count}/>
                 </div>
-                <div className="col-sm-1 text-center">
-                <Button variant="primary" onClick={minCount}>-</Button>{' '}
+                <div className="col-sm-2 text-center">
+                <button className="mx-auto btn-block btn btn-outline-primary" onClick={minCount}>-</button>{' '}
                 </div>
             </div>
             <div className="row">
-                <div className="col-sm-5 text-center">
-                <   Button variant="success" onClick={enviarCarrito}>Enviar Carrito</Button>{' '}
+                <div className="col-sm-12 text-center">
+                    <button className="btn btn-success" onClick={enviarCarrito}>Enviar Carrito</button>{' '}
                 </div> 
             </div>
         </>
