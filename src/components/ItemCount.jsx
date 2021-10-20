@@ -1,18 +1,16 @@
 
 import {useState} from "react";
+import { Link } from "react-router-dom"
 
-const ButonSumar = () => {
+const ButonTerminarCompra = () => {
     
-    return (
-        <>
-
-        </>
-    )
+    return <button className="btn btn-success" onClick="">Finalizar Compra</button>
 }
 
 const ItemCount = ({ stock, initial, onAdd}) => {
     const [count, setCount] = useState(initial)
     const stockUsuario = stock;
+    const [cambiarBoton, setCambiarBoton] = useState(true);
    
     const handleCount = () => {        
          setCount(count+1);    
@@ -33,6 +31,7 @@ const ItemCount = ({ stock, initial, onAdd}) => {
             alert('Debe seleccionar al menos un producto para enviar al Carrito');
         }else{
             alert('Se envían '+count+' al Carrito');
+            setCambiarBoton(false)
         }
     }
     return (
@@ -50,7 +49,17 @@ const ItemCount = ({ stock, initial, onAdd}) => {
             </div>
             <div className="row">
                 <div className="col-sm-12 text-center">
-                    <button className="btn btn-success" onClick={enviarCarrito}>Enviar Carrito</button>{' '}
+                    { cambiarBoton ? 
+                        <button className="btn btn-primary" onClick={enviarCarrito}>Enviar Carrito</button>
+                        :
+                        <div>
+                            <Link exact to={'/cart'}>
+                            <button className="btn btn-success" onClick={enviarCarrito}>Terminar Compra</button>
+                            </Link>
+                            <Link exact to={'/'}><button className="btn btn-info" onClick={enviarCarrito}>Seguir Comprando</button></Link>
+                        </div>
+                
+                    }
                 </div> 
             </div>
         </>

@@ -23,7 +23,7 @@ const Item = ({personas}) => {
                         </div>
                     </div>
                     <div className="card-footer">
-                        <Link exact to={`detalle/${personas.id}`}>
+                        <Link exact to={`/detalle/${personas.id}`}>
                         <button className="btn btn-outline-primary btn-blok" >Detalles</button>
                         </Link>
                         <div>

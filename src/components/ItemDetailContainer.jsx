@@ -5,7 +5,8 @@ import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState([]);
-    const { idProducto} = useParams()
+    const { idProducto} = useParams()    
+    const [loading, setLoading] = useState(true)
     // console.log('Este es el id '+idProducto);
     useEffect(()=> { 
             getFetch
@@ -23,12 +24,15 @@ const ItemDetailContainer = () => {
                 
             })
             .catch(error => console.log(error))
-
+            .finally(()=> setLoading(false))
        
     }, [idProducto])
     return (
         <>
-            <ItemDetail item={item} />
+            { loading ? <h5>Cargando...</h5> : <ItemDetail item={item} />
+
+            }
+            
         </>
     )
 }
