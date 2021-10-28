@@ -3,9 +3,9 @@ import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
 import Container from "react-bootstrap/Container"
 import NavDropdown from "react-bootstrap/NavDropdown"
-import { BsHouseDoorFill, BsFillArchiveFill } from "react-icons/bs";
+import { BsHouseDoorFill, BsFillCartCheckFill, BsShop } from "react-icons/bs";
 import { Link } from "react-router-dom"
-
+//import { BsFillCartCheckFill } from "react-icons/bs";
 
 const NavBar = () => {
     return (
@@ -31,9 +31,10 @@ const NavBar = () => {
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
-                    <BsFillArchiveFill />
+                    
                     <Link exact to='/cart'>
-                        <CartWidget />
+                        <BsFillCartCheckFill />
+                        {/* <BsFillCartCheckFill /> */}
                     </Link>
 
             </Navbar>

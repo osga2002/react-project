@@ -1,12 +1,13 @@
-import { useState } from 'react'
-import { useParams } from "react-router-dom";
+import { useAppContext } from '../Context/AppContext';
 import ItemCount from "./ItemCount"
 const ItemDetail = ({item}) => {
-    const [cantidadSeleccionada, setCantidadSeleccionada] = useState(0)
+    // const [cantidadSeleccionada, setCantidadSeleccionada] = useState(0)
+    const { agregarAlCarrito } = useAppContext()
     const onAdd = (cant)=>{
-        console.log(cant)
-        setCantidadSeleccionada(cant)
+        //console.log(cant)
+        agregarAlCarrito({item: item, cantidad: cant})
     }
+    //console.log(agregarAlCarrito)
     return (
         <>
             <div className="row">
@@ -14,11 +15,11 @@ const ItemDetail = ({item}) => {
                     <div key={item.id} className="card bg-light">
                         <div className="card-header">Detalle de {item.name}</div>
                         <div className="card-body">
-                            <img src={item.foto} /><br />
+                            <img src={item.foto} alt={item.name}></img><br />
                             <h5 className="card-title">Descripción</h5>
                             <p className="card-text">{item.descripcion}</p>
                             <label htmlFor="precio">Precio</label>
-                            <input type="number" className="form-control-sm text-right" id="precio" value={item.precio} />
+                            <input type="number" className="form-control-sm text-right" id="precio" defaultValue={item.precio} />
                         </div>
                         <div className="card-footer">
                             <div>

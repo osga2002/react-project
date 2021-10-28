@@ -1,4 +1,4 @@
-const personas = [
+const items = [
     { id: 1, categoria: 'filtros' ,foto:'/img/220008208078.jpg' , name: "Filtro Bajak NS500", age: 37, precio: 45000, descripcion: "Filtro para el motor de arranque" },
     { id: 2, categoria: 'cadenas' ,foto:'/img/2010001201101.jpg' , name: "Cadena Dorada ", age: 27, precio: 200000, descripcion: "Todo es mejor cada día de tu mano Señor" },
     { id: 3, categoria: 'kits' ,foto:'/img/2010013201136.jpg' , name: "ana", age: 40, precio: 15000, descripcion: "Todo es mejor cada día de tu mano Señor" },
@@ -13,7 +13,7 @@ const personas = [
 export const getFetch = new Promise((resolve)=>{
    
         setTimeout(()=>{
-            resolve(personas)
+            resolve(items)
         }, 2000)  
     
 })
