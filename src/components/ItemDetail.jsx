@@ -4,10 +4,8 @@ const ItemDetail = ({item}) => {
     // const [cantidadSeleccionada, setCantidadSeleccionada] = useState(0)
     const { agregarAlCarrito } = useAppContext()
     const onAdd = (cant)=>{
-        //console.log(cant)
         agregarAlCarrito({item: item, cantidad: cant})
     }
-    //console.log(agregarAlCarrito)
     return (
         <>
             <div className="row">

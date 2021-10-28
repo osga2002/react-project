@@ -25,7 +25,7 @@ const Cart = () => {
             //if (formData.email === formData.email2) {
                 setVerBotonTerminar(false)
             //}else{
-                setVerBotonTerminar(true)
+                //setVerBotonTerminar(true)
             //}            
     }
     const handleOnSubmit = (e) => {
@@ -41,12 +41,9 @@ const Cart = () => {
             const name = carItem.item.name;
             const precio = carItem.item.precio;
             const cantidad = carItem.cantidad;
-            const totalItem = carItem.cantidad * carItem.item.precio;
-            //alert('Jehova '+totalItem)
-            
+            const totalItem = carItem.cantidad * carItem.item.precio;            
             return {id, name, precio, cantidad, totalItem}
         })
-        console.log(orden);
         const db = getFirestore()
         db.collection('orders').add(orden)
         .then(resp => alert(resp.id))

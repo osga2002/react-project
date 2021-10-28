@@ -36,7 +36,6 @@ export default function AppContextProvider({children}) {
     const retirarItem = (id) =>{
         setCarList(carList.filter(prod => prod.item.id !== id));
     }
-    //console.log('Jesus '+carList)
     return (
         <AppContext.Provider value={{
             state, carList, categoriasMotos, ventaTotal, cantidadTotal,

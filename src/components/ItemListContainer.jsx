@@ -43,7 +43,6 @@ function ItemListContainer({greeting}) {
             // .catch(error => console.log(error))
             // .finally(()=> setLoading(false))        
     }, [idCategoria])
-    //console.log(idCategoria);
     return (
         <div className="container">
             <h1>Es el proyecto de venta por catalogo de respuestos para motos.</h1>

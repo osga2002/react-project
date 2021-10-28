@@ -19,7 +19,6 @@ export function Input() {
 
 
 const Titulo = ({ titulo,subtitulo, children}) => {
-    console.log(children)
     return (
         <>
             <h2>{ titulo }</h2>
