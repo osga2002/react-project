@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { getFetch } from '../utils/Mock'
 import { useParams } from "react-router-dom";
 import ItemDetail from './ItemDetail'
+import { getFirestore } from '../services/Firebase';
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState([]);
@@ -10,11 +11,11 @@ const ItemDetailContainer = () => {
     // console.log('Este es el id '+idProducto);
 
     useEffect(()=> { 
-        // const dbQuery = getFirestore()
-        //     dbQuery.collection('items').doc(id).get()
-        //     .then(respuesta => setItem({id: respuesta.id, ...respuesta.data()} ))
-        //     .catch(error => console.log(error))
-        //     .finally(()=> setLoading(false)) 
+        const dbQuery = getFirestore()
+        dbQuery.collection('items').doc(idProducto).get()
+        .then(respuesta => setItem({id: respuesta.id, ...respuesta.data()} ))
+        .catch(error => console.log(error))
+        .finally(()=> setLoading(false)) 
             // getFetch
             // .then(res =>{
             //     if(idProducto){

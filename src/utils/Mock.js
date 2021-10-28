@@ -7,15 +7,16 @@ const items = [
     { id: 6, categoria: 'cadenas' ,foto:'/img/2010001201122.jpg' , name: "Cadena Plateada L520", precio: 85600, descripcion: "Cadena para motos de alto cilindraje" },
     { id: 7, categoria: 'cadenas' ,foto:'/img/2010001300104.jpg' , name: "Ping seguridad Cadena L520", precio: 95200, descripcion: "Ping de seguridad para amarre de cadena de alto cilindraje" },
     { id: 8, categoria: 'cadenas' ,foto:'/img/2010002201202.jpg' , name: "Ping de Cadena J451", precio: 28000, descripcion: "Ping de seguridad para amarre de cadena normal AKT" },
-    { id: 9, categoria: 'cadenas' ,foto:'/img/2010002201211.jpg' , name: "Ping de Cadena G785", precio: 68500, descripcion: "Ping de seguridad amarillo para amarre de cadena normal AKT" }
+    { id: 9, categoria: 'cadenas' ,foto:'/img/2010002201211.jpg' , name: "Ping de Cadena G785", precio: 68500, descripcion: "Ping de seguridad amarillo para amarre de cadena normal AKT" },
+    { id: 10, categoria: 'baterias' ,foto:'/img/2010010201112.jpg' , name: "Cargador de Baterías", precio: 25600, descripcion: "Cargador de batería genérico" },
+    { id: 11, categoria: 'baterias' ,foto:'/img/2010010201116.jpg' , name: "Reactor de Baterías", precio: 12500, descripcion: "Reactor de batería genérico" },
+    { id: 12, categoria: 'baterias' ,foto:'/img/2010010201130.jpg' , name: "Convertidor de Energía en Baterías", precio: 84500, descripcion: "Convertidor de voltaje de baterías especializado" },
   ];
 
-export const getFetch = new Promise((resolve)=>{
-   
+export const getFetch = new Promise((resolve)=>{   
         setTimeout(()=>{
             resolve(items)
-        }, 2000)  
-    
+        }, 2000)    
 })
 
 
