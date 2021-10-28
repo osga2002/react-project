@@ -12,28 +12,20 @@ export default function AppContextProvider({children}) {
     ]
     const [state, setState] = useState(categoriasMotos)
     const ventaTotal = () => {
-        let total = 0;
-        carList.forEach(({prod}) => { total += parseInt(prod.item.precio) * parseInt(prod.cantidad)})
-        return parseInt(total)
+        return carList.reduce((acum, valor)=> acum + (valor.cantidad * valor.item.precio), 0)
     }
     const cantidadTotal = () => {
-        let cantidad = 0;
-        carList.forEach(({prod}) => { cantidad += parseInt(prod.cantidad)})
-        return parseInt(cantidad)
+        return carList.reduce((acum, valor)=> acum + valor.cantidad, 0)
     }
    
     function agregarAlCarrito(prod){
-        let buscarItem = []
-        
-        buscarItem = carList.findIndex(producto => prod.item.id === producto.item.id)
+        let buscarItem = carList.findIndex(producto => prod.item.id === producto.item.id)
         if(buscarItem === -1){
             setCarList([...carList, prod])
-            //alert('Es nuevo')
         }else{
             let modificarItem =[...carList]
             modificarItem[buscarItem].cantidad += prod.cantidad;
             setCarList(modificarItem)
-            //alert("Cambio "+prod.item.name+" la nueva cantidad es: "+prod.cantidad)
         }
     }
 

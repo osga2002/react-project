@@ -50,7 +50,7 @@ const ItemCount = ({ stock, initial, onAdd}) => {
                             <Link exact to={'/cart'}>
                             <button className="waves-effect btn btn-success btn-sm" onClick={enviarCarrito}>Terminar Compra</button>
                             </Link>
-                            <Link exact to={'/'}><button className="btn btn-info btn-sm" onClick={enviarCarrito}>Seguir Comprando</button></Link>
+                            <Link exact to={'/'}><button className="btn btn-info btn-sm">Seguir Comprando</button></Link>
                         </div>
                 
                     }

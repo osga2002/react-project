@@ -3,11 +3,14 @@ import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
 import Container from "react-bootstrap/Container"
 import NavDropdown from "react-bootstrap/NavDropdown"
+import Badge from "react-bootstrap/Badge"
 import { BsHouseDoorFill, BsFillCartCheckFill, BsShop } from "react-icons/bs";
 import { Link } from "react-router-dom"
+import { useAppContext } from "../Context/AppContext"
 //import { BsFillCartCheckFill } from "react-icons/bs";
 
 const NavBar = () => {
+    const { cantidadTotal }= useAppContext()
     return (
         <>
             <Navbar bg="light" expand="lg">
@@ -33,8 +36,10 @@ const NavBar = () => {
                 </Container>
                     
                     <Link exact to='/cart'>
+                    <button type="button" class="btn btn-primary">
                         <BsFillCartCheckFill />
-                        {/* <BsFillCartCheckFill /> */}
+                        <Badge bg="secondary">{ cantidadTotal()}</Badge>
+                        </button>
                     </Link>
 
             </Navbar>

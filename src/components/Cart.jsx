@@ -45,12 +45,15 @@ const Cart = () => {
                                 Totales
                             </th>
                             <th></th>
-                            <th className="text-sm-center">{cantidadTotal}</th>
-                            <th>$ </th>
+                            <th className="text-sm-center">{cantidadTotal()}</th>
+                            <th>$ {ventaTotal()} </th>
                         </tr>
                     </tbody>
                 </table>
                 <button className="btn btn-sm btn-primary" onClick={() => borrarListado()}>Limpiar Carrito <GrClearOption /></button>
+            </div>
+            <div className="col-sm-6">
+
             </div>
         </div>
         </>
