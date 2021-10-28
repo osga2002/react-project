@@ -8,6 +8,10 @@ Este es el gif
 
 ![Image text](https://github.com/osga2002/react-projectOswaldoGaitan/blob/main/reactProyectoOswaldoGaitan.gif)
 
+Se usaron herramientas de Google como firebase donde se realizó la conexión a base de datos en la cual se alojaron todos los items y las ordenes, con los procesos intenos para extraer información de funciones y constantes que se trabajaron con Context, rendering, filter, reduce.
+
+![Image text](https://github.com/osga2002/react-projectOswaldoGaitan/blob/main/reactProyectoOswaldoGaitanFinal.gif)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
