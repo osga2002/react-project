@@ -1,13 +1,13 @@
 const items = [
-    { id: 1, categoria: 'filtros' ,foto:'/img/220008208078.jpg' , name: "Filtro Bajak NS500", age: 37, precio: 45000, descripcion: "Filtro para el motor de arranque" },
-    { id: 2, categoria: 'cadenas' ,foto:'/img/2010001201101.jpg' , name: "Cadena Dorada ", age: 27, precio: 200000, descripcion: "Todo es mejor cada día de tu mano Señor" },
-    { id: 3, categoria: 'kits' ,foto:'/img/2010013201136.jpg' , name: "ana", age: 40, precio: 15000, descripcion: "Todo es mejor cada día de tu mano Señor" },
-    { id: 4, categoria: 'kits' ,foto:'/img/2010013201502.jpg' , name: "sofia", age: 55, precio: 15000, descripcion: "Todo es mejor cada día de tu mano Señor" },
-    { id: 5, categoria: 'filtros' ,foto:'/img/220008208078.jpg' , name: "victoria", age: 11, precio: 15000, descripcion: "Todo es mejor cada día de tu mano Señor" },
-    { id: 6, categoria: 'cadenas' ,foto:'/img/2010001201122.jpg' , name: "federico", age: 19, precio: 15000, descripcion: "Todo es mejor cada día de tu mano Señor" },
-    { id: 7, categoria: 'cadenas' ,foto:'/img/2010001300104.jpg' , name: "pepe", age: 2, precio: 15000, descripcion: "Todo es mejor cada día de tu mano Señor" },
-    { id: 8, categoria: 'cadenas' ,foto:'/img/2010002201202.jpg' , name: "Ping de Cadena", age: 2, precio: 20000, descripcion: "Todo es mejor cada día de tu mano Señor" },
-    { id: 9, categoria: 'cadenas' ,foto:'/img/2010002201211.jpg' , name: "Ping de Cadena", age: 2, precio: 20000, descripcion: "Todo es mejor cada día de tu mano Señor" }
+    { id: 1, categoria: 'filtros' ,foto:'/img/220008208078.jpg' , name: "Filtro Bajak NS500", precio: 45000, descripcion: "Filtro para el motor de arranque" },
+    { id: 2, categoria: 'cadenas' ,foto:'/img/2010001201101.jpg' , name: "Cadena Dorada ", precio: 200000, descripcion: "Cadena para toda clase de motos" },
+    { id: 3, categoria: 'kits' ,foto:'/img/2010013201136.jpg' , name: "Kit NKD Yamaha x250", precio: 145000, descripcion: "Kit de arrastre para moto Yamaha NKD" },
+    { id: 4, categoria: 'kits' ,foto:'/img/2010013201502.jpg' , name: "Kit AKT 150 WS", precio: 163000, descripcion: "Kit de arrastre para moto AKT 150WS de larga duración" },
+    { id: 5, categoria: 'filtros' ,foto:'/img/220008208078.jpg' , name: "Filtro Motor Honda Apache", precio: 55000, descripcion: "Filtro para el motor de Honda Apache" },
+    { id: 6, categoria: 'cadenas' ,foto:'/img/2010001201122.jpg' , name: "Cadena Plateada L520", precio: 85600, descripcion: "Cadena para motos de alto cilindraje" },
+    { id: 7, categoria: 'cadenas' ,foto:'/img/2010001300104.jpg' , name: "Ping seguridad Cadena L520", precio: 95200, descripcion: "Ping de seguridad para amarre de cadena de alto cilindraje" },
+    { id: 8, categoria: 'cadenas' ,foto:'/img/2010002201202.jpg' , name: "Ping de Cadena J451", precio: 28000, descripcion: "Ping de seguridad para amarre de cadena normal AKT" },
+    { id: 9, categoria: 'cadenas' ,foto:'/img/2010002201211.jpg' , name: "Ping de Cadena G785", precio: 68500, descripcion: "Ping de seguridad amarillo para amarre de cadena normal AKT" }
   ];
 
 export const getFetch = new Promise((resolve)=>{

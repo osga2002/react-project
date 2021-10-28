@@ -8,23 +8,29 @@ const ItemDetailContainer = () => {
     const { idProducto} = useParams()    
     const [loading, setLoading] = useState(true)
     // console.log('Este es el id '+idProducto);
+
     useEffect(()=> { 
-            getFetch
-            .then(res =>{
-                if(idProducto){
-                    // console.log('Jesus '+idProducto);
-                    const itemFiltrado = res.filter(item => item.id === parseInt(idProducto))
-                    // console.log(itemFiltrado);
-                    // console.log(res);
-                    setItem(itemFiltrado[0])
-                }else{
-                    // console.log('Jehova '+idProducto);  
-                    setItem(res)        
-                }
+        // const dbQuery = getFirestore()
+        //     dbQuery.collection('items').doc(id).get()
+        //     .then(respuesta => setItem({id: respuesta.id, ...respuesta.data()} ))
+        //     .catch(error => console.log(error))
+        //     .finally(()=> setLoading(false)) 
+            // getFetch
+            // .then(res =>{
+            //     if(idProducto){
+            //         // console.log('Jesus '+idProducto);
+            //         const itemFiltrado = res.filter(item => item.id === parseInt(idProducto))
+            //         // console.log(itemFiltrado);
+            //         // console.log(res);
+            //         setItem(itemFiltrado[0])
+            //     }else{
+            //         // console.log('Jehova '+idProducto);  
+            //         setItem(res)        
+            //     }
                 
-            })
-            .catch(error => console.log(error))
-            .finally(()=> setLoading(false))
+            // })
+            // .catch(error => console.log(error))
+            // .finally(()=> setLoading(false))
        
     }, [idProducto])
     return (

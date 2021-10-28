@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { getFetch } from '../utils/Mock'
 import { useParams } from "react-router-dom";
 import ItemList from './ItemList'
+import { getFirestore } from '../services/Firebase';
 
 
 function ItemListContainer({greeting}) {
@@ -10,16 +11,37 @@ function ItemListContainer({greeting}) {
     const { idCategoria} = useParams()
 
     useEffect(() => {        
-            getFetch
+        const dbQuery = getFirestore()
+        if(idCategoria){
+            dbQuery.collection('items').where('categoria', '==', idCategoria).get()
+            .then(respuesta =>{                
+                    setItems(respuesta.docs.map(prod => ({id: prod.id, ...prod.data()})))
+                
+            })
+            .catch(error => console.log(error))
+            .finally(()=> setLoading(false)) 
+        }else{
+            dbQuery.collection('items').get()
             .then(respuesta =>{
                 if(idCategoria){
-                    setItems(respuesta.filter(prod => prod.categoria === idCategoria))
+                    // setItems(respuesta.docs.map(prod => prod.categoria === idCategoria))
                 }else{
-                    setItems(respuesta)
+                    setItems(respuesta.docs.map(prod => ({id: prod.id, ...prod.data()})))
                 }
             })
             .catch(error => console.log(error))
-            .finally(()=> setLoading(false))        
+            .finally(()=> setLoading(false)) 
+        }
+            // getFetch
+            // .then(respuesta =>{
+            //     if(idCategoria){
+            //         setItems(respuesta.filter(prod => prod.categoria === idCategoria))
+            //     }else{
+            //         setItems(respuesta)
+            //     }
+            // })
+            // .catch(error => console.log(error))
+            // .finally(()=> setLoading(false))        
     }, [idCategoria])
     //console.log(idCategoria);
     return (
